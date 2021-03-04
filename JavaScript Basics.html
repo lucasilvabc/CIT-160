@@ -1,0 +1,64 @@
+// Declaring variable
+let price;
+let numStudents;
+let name;
+
+// String Concatenation
+let name = "Samantha";
+let message = "Hello, " + name + ".  How are you today?";
+
+// Mispelling onclick
+<button type="button" onclick="function()">Name</button>
+
+// Text Fields and Divisions
+  Um programa JavaScript também pode obter entrada de campos de texto em um documento e enviar saída para um div. 
+Usar campos de texto e divs para entrada e saída é melhor do que usar janelas pop-up porque as janelas pop-up incomodam 
+a maioria dos usuários. O exemplo 3 e a figura 4-4 mostram um programa que usa um campo de texto para entrada e uma div 
+para saída. Lembre-se do Capítulo 3 que uma div é simplesmente uma divisão ou parte de um documento HTML.
+  Para obter entrada de um campo de texto, escreva um documento HTML que contenha um campo de texto conforme mostrado 
+na linha 30 do exemplo 3. Dê ao campo de texto um atributo id. Cada id em um documento HTML deve ser único. 
+Em outras palavras, nenhum outro elemento no documento HTML pode ter o mesmo id.
+  Depois de adicionar um campo de texto ao seu documento, escreva uma função JavaScript como a que começa na linha 12. 
+Dentro dessa função, escreva o código que usa a função JavaScript embutida getElementById e os atributos de id e valor 
+do campo de texto para obter a entrada do usuário conforme mostrado na linha 15.
+  Para enviar a saída para um div, primeiro adicione um div com um id exclusivo ao seu documento, 
+conforme mostrado na linha 32. Em seguida, conforme mostrado na linha 24, adicione o código à sua função que usa o id 
+do div e os atributos innerHTML para armazenar os resultados do seu função no div. Embora possa parecer estranho 
+e inconsistente, para um campo de texto, você deve usar seu atributo value, e para um div, você deve usar seu atributo 
+innerHTML. Isso ocorre porque os desenvolvedores de HTML e JavaScript projetaram o atributo value para armazenar o que 
+o usuário digita em um campo de texto. Eles projetaram o atributo innerHTML para conter o que o usuário vê dentro de 
+uma div.
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Applied Scripture</title>
+<script>
+/* Defining Table
+ * Input: A person's name
+ * Processing: Create a verse of scripture for that person
+ * Output: The scripture
+ */
+function applyScripture() {
+    // Get the user's name from the text field that has the id
+    // of "nameInputBox" and store it in a variable named name.
+    let name = document.getElementById('nameInputBox').value;
+
+    // Use string concatenation to create a verse
+    // of scripture personalized for the user.
+    let scripture = "I, " + name + ", having been born of" +
+        " goodly parents, therefore I was taught somewhat" +
+        " in all the learning of my father.";
+
+    // Display the scripture in the div that has the id "outputDiv".
+    document.getElementById('outputDiv').innerHTML = scripture;
+}
+</script>
+</head>
+
+<body>                             
+Please enter your name: <input type="text" id="nameInputBox">    
+<button type="button" onclick="applyScripture()">Verse</button>
+<div id="outputDiv"></div>
+</body>       
+</html>

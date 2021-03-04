@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Mileage</title>
+        <meta charset="utf-8">
+
+        <script>
+/* Input:
+* Processing:
+* Output:
+*/
+            function milesToGallon() {
+                let beginning = parseFloat(document.getElementById('odomeS').value);
+                let ending = parseFloat(document.getElementById('odomeF').value);
+                let gallon = parseFloat(document.getElementById('gallons').value);
+                let miles = ending - beginning;
+                let mpg = miles / gallon;
+                document.getElementById('outputDiv').innerHTML = "The miles per gallon are " + mpg;
+            }
+        </script>
+    </head>
+
+    <body>
+        Odometer beginning <input type="text" id="odomeS">
+        <br>
+        Odometer ending <input type="text" id="odomeF">
+        <br>
+        Gasoline (gallons) <input type="text" id="gallons">
+        <button type="button" onclick="milesToGallon()">Send</button>
+        <div id="outputDiv"></div>
+    </body>
+</html>

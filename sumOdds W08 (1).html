@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Sum of Odd Numbers</title>
+
+<script>
+function sumOdds() {
+    /*Defining Table
+    *Input: Enter an integer
+    *Processing: Moment that the program takes the user's number and inserts all the odd numbers.
+    *Output: Shows the sum of all odd integers for the user
+    */
+    var input = parseInt(document.getElementById('integerBox').value);
+    var result = 0;
+    var oddNum = 1;
+    
+    for (;  oddNum <= input;  oddNum++) {
+
+        if (oddNum % 2 != 0) {
+            result = oddNum + result;
+        }
+    }
+
+    alert("The sum of the odd numbers is " + result);
+}
+</script>
+</head>
+
+<body>
+Please enter an integer: <input type="text" id="integerBox"><br>  
+<button type="button" onclick="sumOdds()">Sum Odds</button>  
+<div id="outputDiv"></div>  
+</body>
+</html>

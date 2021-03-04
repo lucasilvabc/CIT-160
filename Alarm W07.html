@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Message for the Day</title>
+<script>
+/* Input: From computer's clock: now, month, dayOfMonth and dayOfWeek.
+ * Processing: Get month and day to display two messages one for holidays and the other for every other day of the year.
+ * Output: "Sleep in." message on weekends, New Year's Day, 4th of July, and Christmas. "Get up!" for the rest of the days of the year.
+ */
+function sleepUp() {
+    var now = new Date();
+    var month = now.getMonth();
+    var dayOfMonth = now.getDate();
+    var dayOfWeek = now.getDay();
+    
+    if (month == 11 && dayOfMonth == 25) {
+        message = "Sleep in.";
+    } else if ( month == 6 && dayOfMonth == 4) {
+        message = "Sleep in.";
+    } else if (month == 0 && dayOfMonth == 1) {
+        message = "Sleep in.";
+    } else if (dayOfWeek == 0 || dayOfWeek == 6) {
+        message = "Sleep in.";
+    } else {
+        message = "Get up!!!";
+    }
+    document.getElementById('output').innerHTML = message;
+}
+
+</script>
+</head>
+<body>
+<button onclick="sleepUp()">Message</button>
+<div id="output"> </div>
+</body>       
+</html>

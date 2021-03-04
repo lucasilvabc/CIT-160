@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Footwear</title>
+<script>
+"use strict";
+    /* Input: Types of weather
+     * Processing: Type of shoes for differents weathers
+     * Output: Type of shoe
+     */
+    function footwear(){
+        let weather = document.getElementById("weather").value;
+        let shoe;
+        if (weather == "hot") {
+            shoe = "sandals";
+        }
+        else if (weather == "rain") {
+            shoe = "galoshes";
+        }
+        else if (weather == "snow") {
+            shoe = "boots";
+        }
+        else {
+            shoe = "shoes"
+        }
+
+        document.getElementById("shoeType").innerHTML = "You must use " + shoe + ".";
+    }
+</script>
+</head>
+
+<body>
+    Weather: <input type="text" id="weather">
+    <button type="button" onclick="footwear()">Send</button>
+    <div id="shoeType"></div> 
+    </body>    

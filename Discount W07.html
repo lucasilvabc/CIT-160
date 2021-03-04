@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+    <title>Discount Day</title>
+</head>
+<body> 
+<script>
+/* Defining Table
+ * Input: User enters the subtotal
+ * Process: If the subtotal is greater than $50 and it is Tuesday or Wednesday, 
+   calculate and subtract a 10% discount. Then, in either case, add a sales tax of 6%.
+ * Output:
+ */
+ function discountDay() {
+     //Discount days are Tuesdays (2) and Wednesdays (3)
+ let dayOfWeek = new Date().getDay();
+ let subtotal = parseInt(document.getElementById('subtotal').value);
+    let price;
+    if((dayOfWeek==2||dayOfWeek==3) && subtotal > 50) {
+        //The taxes are calculated after the discount 
+        price= (subtotal * 0.9) * 1.06;
+    }
+    else { 
+        price=(subtotal * 1.06);
+    }
+    document.getElementById('price').innerHTML = price;
+ }
+</script>
+<h1>The calculate Your Total Price</h1>
+<h2>Please enter the subtotal:</h2> <input type="text" id="subtotal" size="35">
+<button type="button" onclick="discountDay()" ><b>Cost</b></button>
+<div id="price"></div>
+</body>
+</html>

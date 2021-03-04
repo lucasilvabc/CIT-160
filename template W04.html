@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Applied Scripture</title>
+<script>
+
+function applyScripture() {
+    
+    let name = document.getElementById('nameInputBox').value;
+
+    
+    let scripture = "Hi, " + name + ", nice to meet you.";
+
+    
+    document.getElementById('outputDiv').innerHTML = scripture;
+}
+</script>
+</head>
+
+<body>                             
+Please enter your name: <input type="text" id="nameInputBox">
+<h1>Contact Informations</h1>
+<p>
+    Email:
+    <input type="text" id="txtEmail" size="10">
+</p>  
+
+<p>
+    Address:<br>
+    <textarea id="txaAddress" rows="8" cols="40">
+    </textarea>
+</p>  
+<button type="button" onclick="applyScripture()">Send</button>
+<div id="outputDiv"></div>
+</body>       
+</html>

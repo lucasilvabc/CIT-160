@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>mathQuiz</title>
+<script>
+    /* Input: Numbers and Operators
+     * Processing: Testing calculation
+     * Output: Correct or Incorrect
+     */
+    function mathQuiz(){
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let num3 = parseFloat(document.getElementById("result").value);
+        let op = document.getElementById("operator").value;
+        let check;
+        if (op == "+") {
+            if (num1 + num2 == num3) {
+                check = "Correct! Good job!"
+            }
+            else {
+                check = "Incorrect! Try again"
+                
+            }
+        }
+        else if (op == "-") {
+            if (num1 - num2 == num3) {
+                check = "Correct! Good job!"
+            }
+            else {
+                check = "Incorrect! Try again"
+                
+            }
+        }
+        else if (op == "*") {
+            if (num1 * num2 == num3) {
+                check = "Correct! Good job!"
+            }
+            else {
+                check = "Incorrect! Try again"
+                
+            }
+        }
+        else if (op == "/") {
+            if (num1 / num2 == num3) {
+                check = "Correct! Good job!"
+            }
+            else {
+                check = "Incorrect! Try again!"
+                
+            }
+        }
+        document.getElementById("verify").innerHTML = check;
+    }
+</script> 
+</head>       
+<body>
+    <h1>Test Your Math Skills!</h1>
+<input type="text" id="num1" size="5">
+<input type="text" id="operator" size="1">
+<input type="text" id="num2" size="5">
+= <input type="text" id="result" size="5">
+<button type="button" onclick="mathQuiz()">Send</button>
+<div id="verify"></div>       
+</body>
+</html>

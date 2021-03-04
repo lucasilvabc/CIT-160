@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>5 Times Table</title>
+    <script>
+        /* Input: Nothing.
+         * Processing: Use a loop to figure out all multiples of 5 between 1 and 12.
+         * Output: display all integers and sums like this: 5 x 1 = 1 and so on.
+         */
+        function fiveTimesTable() {
+            var display = "";
+                for (var i = 1; i <= 12; i++) {
+                    display += "5 x " + i + " = " + 5 * i + "<br>";
+                }
+            document.getElementById('outputDiv').innerHTML = display;
+        }
+    </script>
+</head>
+<body>
+<main>
+    <h1>5 Times Table</h1>
+    <button type='button' onclick='fiveTimesTable()'>Get the Table</button>
+    <div id='outputDiv'></div>
+</main>    
+</body>
+</html>

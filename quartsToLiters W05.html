@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-us">
+    
+   <head>
+      <meta charset="utf-8">
+      <title>HTML 5 template</title>
+
+      <script>
+/* Input:
+* Processing:
+* Output:
+*/
+        "use strict";
+
+        function quartsToLiters(){
+            // text box for user 
+let input = document.getElementById("inputBox").value;
+// convert input to number 
+let i = parseFloat(input);
+// formula to convert input to liters
+let l = i * .946353; 
+// display to user 
+
+document.getElementById("litersDIV").innerHTML = l;
+
+        }
+         
+     </script> 
+   </head>
+   <body>
+    <h1>Converting Quarts to Liters </h1>
+
+     <br/>
+     <p>Insert quarts and click the button to convert to liters! </p>
+      <input type="text" id="inputBox" name="quarts">
+      <br/>
+      <br/>
+      <button type="button" onclick="quartsToLiters()">Send</button>
+      <br><br/>
+      <div id="litersDIV" >  </div>
+      
+   </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>PowerOfTwo</title>
+    <script>
+        /* Input: Nothing.
+         * Processing: Use a loop to figure out all powers of 2 between 0 and 31
+         * Output: display all powers of 2 between 0 and 31
+         */
+        function powersOfTwo() {
+            var display = "";
+                for (var i = 0; i <= 31; i++) {
+                    display += "2 to the " +i+ " = " + Math.pow(2, i) + "<br>";
+                }
+            document.getElementById('outputDiv').innerHTML = display;
+        }
+    </script>
+</head>
+<body>
+<main>
+    <h1>Powers of 2 Between 0 and 31</h1>
+    <button type='button' onclick='powersOfTwo()'>Get the Powers</button>
+    <div id='outputDiv'></div>
+</main>    
+</body>
+</html>
