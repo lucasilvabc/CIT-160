@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+/* Input: Enter 2 numbers
+ * Processing: Analyzes whether the two numbers are greater than 5 and whether the sum is greater than 20 
+ * Output: Shows true or false depending on the numbers
+ */
+    function provenine() {
+        let number1 = document.getElementById("number1").value;
+        let number2 = document.getElementById("number2").value;
+        if (number1 > 5 && number2 > 5 && number1 + number2 > 20) {
+            let statement = "True"
+            alert(statement);
+        }
+        else {
+            let statement1 = "False"
+            alert(statement1);
+        }
+    
+        document.getElementById('output').innerHTML = number1;
+        document.getElementById('output1').innerHTML = number2;
+        
+    }
+
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="number1" size="5">
+<input type="text" id="number2" size="5">
+<button type="button" onclick="provenine">Click</button>
+<div id="output"></div>
+<div id="output1"></div>
+</body>
+</html>

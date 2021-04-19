@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<meta charset="utf-8">
+<title>Investment Calculator</title>
+<script>
+    /* Input: Enter 4 variables
+    * Processing: Use computeFutureValue to calculate the variables
+    * Output: Return the final value after the initial value has been defined in the function
+    */
+function doFV (){
+    var principal = parseFloat(document.getElementById('principalInputBox').value);
+    var annualRate = parseFloat(document.getElementById('annualRateInputBox').value);
+    var years = parseFloat(document.getElementById('yearsInputBox').value);
+    var periodsPerYear = parseFloat(document.getElementById('periodsPerYearInputBox').value);
+
+    var result = computeFutureValue(principal, annualRate, years, periodsPerYear);
+    document.getElementById('outputDiv').innerHTML = "$" + result.toFixed(2);
+}
+function computeFutureValue(principal, annualRate, years, periodsPerYear){
+    var growthRatePerPeriod = annualRate / periodsPerYear;
+    var periods = years * periodsPerYear;
+    var f = principal * Math.pow(1 + growthRatePerPeriod, periods);
+    return f;
+
+}
+
+</script>
+</head>
+
+<body>
+<h2>Investment Calculator</h2>
+Amount invested (principal) <input type="text" id="principalInputBox" size="8"><br>
+Annual rate (example: .08) <input type="text" id="annualRateInputBox" size="6"><br>
+Number of years <input type="text" id="yearsInputBox" size="5"><br>
+Perids per year <input type="text" id="periodsPerYearInputBox" size="5"><br>
+<button type="button" onclick="doFV()">Compute future value</button>
+<div id="outputDiv"></div>        
+</body>
+</html>

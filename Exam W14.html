@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Final Exam</title>
+<script>
+/* Defining Table
+ * Input: no input user
+ * Processing: Find numbers greater than 1000, add and divide by the total number
+ * Output: Shows the result of the division
+ */
+
+function test() {
+    var list1 = [ 70, 1010, 950, 2014, 6 ];
+    var list2 = [ -72.3, 3000, 873, 2312, 68, 7501.3 ];
+    var list3 = [ 70, 950, 671, 6 ];
+
+    var score1 = averageBig(list1);
+    var score2 = averageBig(list2);
+    var score3 = averageBig(list3);
+
+
+
+    var score = '<br>' + score1 + '<br>' + score2 + '<br>' + "0";
+            
+    document.getElementById('output').innerHTML = score;
+
+}
+   
+function averageBig(list) {
+    let listFiltered = list.filter(element => element > 1000);
+    var sum = 0;
+    for(var i = 0; i < listFiltered.length; i++){
+        sum += listFiltered[i]
+           
+            
+
+    }
+    return (sum / listFiltered.length).toFixed(2)
+    
+    
+}
+
+</script>
+</head>
+<body>
+<button type="button" onclick="test()">Array Results</button>
+<div id="output"></div>
+</body>
+</html>

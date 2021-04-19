@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Final Exam</title>
+<script>
+/* Defining Table
+ * Input: Receive the numbers
+ * Processing: Calculates depreciation
+ * Output: Shows the user the depreciation amount
+ */
+
+ function depreciation(startValue, endValue, months) {
+     startValue = document.getElementById("s").value;
+     endValue = document.getElementById("e").value;
+     months = document.getElementById("m").value;
+     d = (startValue -  endValue) / months; 
+    
+    document.getElementById('output').innerHTML = "Depreciation is equal to " + d.toFixed(2);
+}
+
+
+</script>
+</head>
+<body>
+   Start Value: <input type="text" id="s"><br>
+   End Value: <input type="text" id="e"><br>
+   Months: <input type="text" id="m">
+<button type="button" onclick="depreciation()">Calculate</button>
+<div id="output"></div>
+</body>
+</html>

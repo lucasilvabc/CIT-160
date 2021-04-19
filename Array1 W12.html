@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Array</title>
+<script>
+/* Defining Table
+ * Input: no user input
+ * Processing: Test the addEnds and getMiddle functions by calling them.
+ * Output: The values returned from the addEnds and getMiddle functions.
+ */
+function test() {
+    let list1 = [ 17, 8, 9, 5, 20 ];
+    let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+
+    // Test the addEnds function by calling it two times and displays the sum value.
+    let sum1 = addEnds(list1);
+    document.getElementById('sum1').innerHTML = "Sum: " + sum1;
+    let sum2 = addEnds(list2);
+    document.getElementById('sum2').innerHTML =  "Sum: " + sum2;
+
+    // Test the getMiddle function by calling it two times and displays the value of the division.
+    let mid1 = getMiddle(list1);
+    document.getElementById('mid1').innerHTML = "Middle: " + mid1;
+    let mid2 = getMiddle(list2);
+    document.getElementById('mid2').innerHTML = "Middle: " + mid2;
+}
+    
+function addEnds(list){
+    var sum = '';
+    sum = list[0] + list[list.length -1];
+    return sum;
+}
+        
+function getMiddle(list){
+    var middle = '';
+    if (list.length % 2 ==0){
+        var middle = list.length / 2;
+        return (list[middle] + list[middle -1]) / 2;
+    }else {
+        return list[Math.round((list.length -1)/2)];
+    }
+}
+</script>
+</head>
+<body>
+<button type="button" onclick="test()">Array Results</button>
+<div id="sum1"></div>
+<div id="sum2"></div>
+<div id="mid1"></div>
+<div id="mid2"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Final Exam</title>
+<script>
+/* Defining Table
+ * Input: Write given name and family name
+ * Processing: Leave the names in the correct order
+ * Output: Shows the user the name already in the correct order
+ */
+ function makeFullName(givenName, familyName) {
+     givenName = document.getElementById("g").value;
+     familyName = document.getElementById("f").value;
+    
+    document.getElementById('output').innerHTML = familyName + ", " + givenName;
+}
+
+
+</script>
+</head>
+<body>
+   Given Name: <input type="text" id="g"><br>
+   Family Name: <input type="text" id="f">
+<button type="button" onclick="makeFullName()">Send</button>
+<div id="output"></div>
+</body>
+</html>
